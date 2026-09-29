@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Atlas das Madrugadas</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f3ecdf;--ink:#1d1a16;--mute:#6f665a;--acc:#c2410c;--card:#ebe2d1;--line:#d6c9b0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12100e;--ink:#efe6d6;--mute:#9a8f7e;--acc:#f59e5b;--card:#1c1915;--line:#332d25}}
+:root[data-theme="dark"]{--bg:#12100e;--ink:#efe6d6;--mute:#9a8f7e;--acc:#f59e5b;--card:#1c1915;--line:#332d25}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Fraunces,Georgia,'Times New Roman',serif;line-height:1.6}
+main{max-width:720px;margin:0 auto;padding:0 22px}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center}
+.kicker{font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;color:var(--acc)}
+h1{font-weight:300;font-size:clamp(2.8rem,11vw,5.6rem);line-height:1;margin:.3em 0}
+h1 em{color:var(--acc);font-style:italic}
+.lead{font-size:1.2rem;color:var(--mute);max-width:32em}
+.clock{margin-top:2.5rem;font-size:.9rem;color:var(--mute);border-top:1px solid var(--line);padding-top:1rem}
+h2{font-weight:600;font-size:1.1rem;letter-spacing:.15em;text-transform:uppercase;margin:4rem 0 1.5rem}
+.s{display:block;width:100%;text-align:left;background:var(--card);color:inherit;font:inherit;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px;cursor:pointer;transition:transform .2s,border-color .2s}
+.s:hover,.s:focus-visible{transform:translateY(-2px);border-color:var(--acc);outline:none}
+.t{font-size:1.6rem;color:var(--acc);font-weight:300}
+.n{font-size:1.25rem;font-weight:600;margin:.1em 0}
+.d{max-height:0;overflow:hidden;color:var(--mute);transition:max-height .5s ease}
+.s.on .d{max-height:200px;margin-top:.5rem}
+.hint{font-size:.85rem;color:var(--mute);font-style:italic}
+blockquote{margin:4rem 0;padding-left:20px;border-left:3px solid var(--acc);font-size:1.5rem;font-weight:300;font-style:italic}
+form{display:flex;flex-direction:column;gap:10px}
+textarea{font:inherit;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;min-height:90px;resize:vertical}
+button.go{align-self:flex-start;font:inherit;background:var(--acc);color:var(--bg);border:0;border-radius:99px;padding:10px 22px;cursor:pointer}
+#wall p{margin:.6rem 0;padding:10px 14px;background:var(--card);border-radius:10px}
+footer{margin:5rem 0 3rem;color:var(--mute);font-size:.85rem;border-top:1px solid var(--line);padding-top:1rem}
+</style>
+</head>
+<body>
+<main>
+<section class="hero">
+<div class="kicker">Um catálogo afetivo · vol. I</div>
+<h1>Atlas das <em>Madrugadas</em></h1>
+<p class="lead">Existe uma hora em que a cidade ainda não é de ninguém. Este atlas mapeia os sons pequenos dela, antes que o dia os engula.</p>
+<div class="clock" id="clock">Agora são --:--. Alguém, em algum lugar, está acordando.</div>
+</section>
+
+<h2>Seis sons</h2>
+<p class="hint">Toque em cada um para ouvir uma lembrança sintética e ler o verbete.</p>
+
+<button class="s" data-f="196" data-k="tone"><div class="t">03:12</div><div class="n">A geladeira que suspira</div><div class="d">Um zumbido grave que só existe quando tudo o mais se cala. É a casa respirando fundo antes de dormir de vez.</div></button>
+<button class="s" data-f="880" data-k="ping"><div class="t">04:05</div><div class="n">O primeiro passarinho</div><div class="d">Ele canta cedo demais, sem plateia, por puro compromisso. Todo amanhecer tem um funcionário exemplar.</div></button>
+<button class="s" data-f="0" data-k="noise"><div class="t">04:48</div><div class="n">O caminhão de lixo, ao longe</div><div class="d">Freio, metal, um grito de "vai!". Uma coreografia que ninguém aplaude e que mantém a rua decente.</div></button>
+<button class="s" data-f="330" data-k="tone"><div class="t">05:30</div><div class="n">A porta de aço da padaria</div><div class="d">Sobe rangendo como quem reclama do horário. Logo depois, cheiro: o único som que se ouve pelo nariz.</div></button>
+<button class="s" data-f="523" data-k="ping"><div class="t">05:52</div><div class="n">O rádio de pilha do porteiro</div><div class="d">Uma voz de locutor, meio chiada, dando a previsão do tempo para ninguém. Ele concorda com a cabeça.</div></button>
+<button class="s" data-f="110" data-k="tone"><div class="t">06:20</div><div class="n">O primeiro ônibus</div><div class="d">Chega quase vazio, iluminado feito aquário. É a hora em que a cidade admite que precisa de gente.</div></button>
+
+<blockquote>Silêncio não é ausência de som. É o som que sobra quando o mundo tira os sapatos.</blockquote>
+
+<h2>Sua madrugada</h2>
+<p class="hint">Qual som você ouve quando todo mundo dorme? Escreva; ele entra no mural desta visita.</p>
+<form id="f"><textarea id="x" placeholder="O ventilador de teto tem um tique a cada volta…" maxlength="160"></textarea><button class="go" type="submit">Acrescentar ao atlas</button></form>
+<div id="wall"></div>
+
+<footer>Atlas das Madrugadas · feito à mão, sem pressa · o mural não é salvo entre visitas.</footer>
+</main>
+<script>
+(function(){
+var c=document.getElementById('clock');
+function tick(){var d=new Date(),h=('0'+d.getHours()).slice(-2),m=('0'+d.getMinutes()).slice(-2);
+var hr=d.getHours(),t=hr<6?'Alguém, em algum lugar, está acordando.':hr<12?'A madrugada já virou lembrança.':hr<18?'O atlas espera a noite.':'Falta pouco para os sons pequenos voltarem.';
+c.textContent='Agora são '+h+':'+m+'. '+t}
+tick();setInterval(tick,30000);
+var ctx;
+function play(f,k){
+try{ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();var t=ctx.currentTime,g=ctx.createGain();g.connect(ctx.destination);
+if(k==='noise'){var n=ctx.sampleRate*1.2,b=ctx.createBuffer(1,n,ctx.sampleRate),a=b.getChannelData(0);for(var i=0;i<n;i++)a[i]=(Math.random()*2-1)*(1-i/n);
+var s=ctx.createBufferSource(),fl=ctx.createBiquadFilter();fl.type='lowpass';fl.frequency.value=500;s.buffer=b;s.connect(fl);fl.connect(g);g.gain.setValueAtTime(.25,t);s.start(t);return}
+var o=ctx.createOscillator();o.type=k==='ping'?'sine':'triangle';o.frequency.value=f;o.connect(g);
+var len=k==='ping'?.5:1.6;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.18,t+.05);g.gain.exponentialRampToValueAtTime(.001,t+len);
+o.start(t);o.stop(t+len+.05);
+if(k==='ping'){var o2=ctx.createOscillator();o2.frequency.value=f*1.5;o2.connect(g);o2.start(t+.18);o2.stop(t+.6)}
+}catch(e){}}
+document.querySelectorAll('.s').forEach(function(b){b.addEventListener('click',function(){
+b.classList.toggle('on');if(b.classList.contains('on'))play(+b.dataset.f,b.dataset.k)})});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+var v=document.getElementById('x'),t=v.value.trim();if(!t)return;
+var p=document.createElement('p');p.textContent='“'+t+'”';document.getElementById('wall').prepend(p);v.value=''});
+})();
+</script>
+</body>
+</html>
